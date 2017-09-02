@@ -1,8 +1,9 @@
 
 (defsystem #:mcclim-raster-image
-    :depends-on (#:mcclim-render
-                 #:mcclim-render/clx
-		 #:mcclim-single-mirrored-standard)
+  :depends-on (#:mcclim-render
+	       #-(or mcclim-graphic-forms mcclim-beagle)
+	       #:mcclim-render/clx
+	       #:mcclim-single-mirrored-standard)
     :serial t
     :components
     ((:file "package")
